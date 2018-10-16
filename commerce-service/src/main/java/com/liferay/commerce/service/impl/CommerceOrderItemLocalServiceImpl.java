@@ -233,6 +233,20 @@ public class CommerceOrderItemLocalServiceImpl
 			commerceOrderId, cpInstanceId, start, end, orderByComparator);
 	}
 
+	public List<CommerceOrderItem> getCommerceOrderItemsByCPInstanceId(
+		long cpInstanceId, int start, int end) {
+			return commerceOrderItemPersistence.findByCPInstanceId(
+				cpInstanceId, start, end);
+	}
+
+	public List<CommerceOrderItem> getCommerceOrderItemsByCPInstanceId(
+        long cpInstanceId, int start, int end, 
+        OrderByComparator<CommerceOrderItem> orderByComparator) {
+
+        return commerceOrderItemPersistence.findByCPInstanceId(
+            cpInstanceId, start, end, orderByComparator);
+    }
+
 	@Override
 	public int getCommerceOrderItemsCount(long commerceOrderId) {
 		return commerceOrderItemPersistence.countByCommerceOrderId(
