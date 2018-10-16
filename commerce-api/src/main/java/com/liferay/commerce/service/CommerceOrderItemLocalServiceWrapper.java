@@ -305,6 +305,21 @@ public class CommerceOrderItemLocalServiceWrapper
 			cpInstanceId, start, end, orderByComparator);
 	}
 
+	@Override
+	public java.util.List<com.liferay.commerce.model.CommerceOrderItem> getCommerceOrderItemsByCPInstanceId(
+		long cpInstanceId, int start, int end) {
+		return _commerceOrderItemLocalService.getCommerceOrderItemsByCPInstanceId(cpInstanceId,
+			start, end);
+	}
+
+	@Override
+	public java.util.List<com.liferay.commerce.model.CommerceOrderItem> getCommerceOrderItemsByCPInstanceId(
+		long cpInstanceId, int start, int end,
+		com.liferay.portal.kernel.util.OrderByComparator<com.liferay.commerce.model.CommerceOrderItem> orderByComparator) {
+		return _commerceOrderItemLocalService.getCommerceOrderItemsByCPInstanceId(cpInstanceId,
+			start, end, orderByComparator);
+	}
+
 	/**
 	* Returns the number of commerce order items.
 	*
